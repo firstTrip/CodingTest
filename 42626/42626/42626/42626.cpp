@@ -5,23 +5,61 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include <algorithm>
+#include <queue>
 
 using namespace std;
+
+int scovil(int x ,int y)
+{
+    return x + (2*y);
+}
 
 int solution(vector<int> scoville, int K) 
 {
     int answer = 0;
+    priority_queue<int,vector<int>,greater<int>> qu;//우선순위 큐를 사용 최소힙으로 변경 
 
-    sort(scoville.begin(),scoville.end());// sort 를 사용 할 때 첫 인자에는 정렬할 값의 첫 주소 , 두 번째 인자에는 정렬할 값의 마지막 주소를 입력 한다.
     
     for (int i = 0; i < scoville.size(); i++)
     {
-        cout << "scoville is " << scoville[i] << endl;
+        qu.push(scoville[i]);
+
+    }
+
+    while (!qu.empty() && qu.top()<K)
+    {
+
+        if (qu.size() == 1)
+            return -1;
+
+        int x, y;
+
+        x = qu.top();
+        qu.pop();
+        y = qu.top();
+        qu.pop();
+
+
+        cout << x<< "     "<< y;
+        cout << '\n';
+        scovil(x, y);
+               
+        answer++;
+
+        if (x < K)
+        {
+           
+            qu.push(scovil(x, y));
+            cout << scovil(x, y);
+            cout << '\n';
+        }
+
 
     }
 
 
+
+    cout <<"answer is " <<  answer;
     return answer;
 }
 
@@ -29,13 +67,9 @@ int main()
 {
 
     vector<int> answer;
-    answer = { 1,2,3,4,10,12 };
-
-    for (int i = 0; i < answer.size(); i++)
-        cout << "answer is " << answer[i] << endl;
-
+    answer = { 2,1,3,4,10,12 };
 
     solution(answer, 7);
-
+ 
     return 0;
 }
