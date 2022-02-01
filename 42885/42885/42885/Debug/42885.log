@@ -1,5 +1,5 @@
 ﻿  42885.cpp
 C:\Users\hdnwl\Desktop\CodingTest\42885\42885\42885\42885.cpp(14,18): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\hdnwl\Desktop\CodingTest\42885\42885\42885\42885.cpp(19,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\hdnwl\Desktop\CodingTest\42885\42885\42885\42885.cpp(23,39): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\42885\42885\42885\42885.cpp(26,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\42885\42885\42885\42885.cpp(30,39): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   42885.vcxproj -> C:\Users\hdnwl\Desktop\CodingTest\42885\42885\Debug\42885.exe
