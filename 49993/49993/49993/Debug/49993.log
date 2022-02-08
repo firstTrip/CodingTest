@@ -1,6 +1,6 @@
 ﻿  49993.cpp
-C:\Users\hdnwl\Desktop\CodingTest\49993\49993\49993\49993.cpp(11,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\hdnwl\Desktop\CodingTest\49993\49993\49993\49993.cpp(13,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\hdnwl\Desktop\CodingTest\49993\49993\49993\49993.cpp(15,31): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\hdnwl\Desktop\CodingTest\49993\49993\49993\49993.cpp(22,45): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\49993\49993\49993\49993.cpp(59,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\49993\49993\49993\49993.cpp(62,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\49993\49993\49993\49993.cpp(63,31): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\49993\49993\49993\49993.cpp(71,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   49993.vcxproj -> C:\Users\hdnwl\Desktop\CodingTest\49993\49993\Debug\49993.exe
