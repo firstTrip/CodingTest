@@ -11,10 +11,7 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
     vector<int> answer;
     stack<int> st;
 
-    while (1)
-    {
-
-    }
+    
 
     return answer;
 }
