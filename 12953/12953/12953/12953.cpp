@@ -14,7 +14,9 @@ int solution(vector<int> arr) {
 
 int main()
 {
+    vector<int> arr = { 12,10,18 };
 
+    solution(arr);
 
     return 0;
 }
