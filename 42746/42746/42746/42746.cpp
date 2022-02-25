@@ -26,6 +26,9 @@ string solution(vector<int> numbers) {
             r = r % 10;
             cout << "r is " << r << '\n';
 
+
+
+
         }
 
         arr[0].push_back(numbers[i]);
