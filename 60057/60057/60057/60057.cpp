@@ -21,7 +21,7 @@ int solution(string s) {
 
     for (int i = 0; i < s.length(); i++)
     {
-        tmp += s[i];
+        tmp += s[i];// 빈 공간에 새로 저장 
 
     }
 
