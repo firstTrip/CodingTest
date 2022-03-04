@@ -23,6 +23,8 @@ int solution(string s) {
     {
         tmp += s[i];// 빈 공간에 새로 저장 
 
+
+        //ha molra....
     }
 
     return answer;
