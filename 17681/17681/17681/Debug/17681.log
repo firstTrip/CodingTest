@@ -1,0 +1,5 @@
+﻿  17681.cpp
+C:\Users\hdnwl\Desktop\CodingTest\17681\17681\17681\17681.cpp(14,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\17681\17681\17681\17681.cpp(20,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\17681\17681\17681\17681.cpp(23,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  17681.vcxproj -> C:\Users\hdnwl\Desktop\CodingTest\17681\17681\Debug\17681.exe
