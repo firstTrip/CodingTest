@@ -1,0 +1,5 @@
+﻿  86051.cpp
+C:\Users\hdnwl\Desktop\CodingTest\86051\86051\86051\86051.cpp(16,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\86051\86051\86051\86051.cpp(18,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\86051\86051\86051\86051.cpp(30,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  86051.vcxproj -> C:\Users\hdnwl\Desktop\CodingTest\86051\86051\Debug\86051.exe
