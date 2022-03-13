@@ -4,7 +4,7 @@
 #include<stack>
 using namespace std;
 
-int solution(string s)
+int solution(string s)// 문자열 줄이기 
 {
     int answer = -1;
 
