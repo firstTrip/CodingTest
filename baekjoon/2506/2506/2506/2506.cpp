@@ -3,36 +3,42 @@
 
 using namespace std;
 
-int solution(vector<int> num) {
+int solution() {
    
-	int answer = 0;
-	int temp = 0;
+	int answer = 0;// 
+	int cnt = 0;//답을 맞췄을 때 득점 
+	int numOfAnswer;// 문제의 갯수
 
-	for (int i = 0; i < num.size(); i++)
+	int n;
+	vector<int> nums;
+
+	cin >> numOfAnswer; // 문제의 갯수를 사용자에게 입력 받음
+
+	for (int i = 0; i < numOfAnswer; i++)// 문제의 갯수만큼 답을 입력받음
 	{
-		if (num[i] == 0)
+		cin >> n;
+		nums.push_back(n);// nums 벡터에 저장
+	}
+
+	for (int i = 0; i < numOfAnswer; i++)// 문제의 갯수만큼 for 문을 돌림
+	{
+		if (nums[i] == 0)// nums의 i 번째 요소가 0 인경우 득점을 0 으로 초기화
 		{
-			temp = 0;
-			cout << "temp is " << temp << '\n';
+			cnt = 0;
 		}
-		else
+		else // 답을 맞춘경우 cnt 를 증가 시켜주고 총 득점에 더해준다.
 		{
-			temp++;
-			answer += temp;
-			cout << "temp is " << temp << '\n';
+			cnt++;
+			answer += cnt;
 		}
 	}
-	cout << answer;
-
     return answer;
 }
 
 
 int main()
 {
-	vector<int> nums = { 1,0,1,1,1,0,0,1,1,0 };
-
-	solution(nums);
+	cout<< solution();
 	
 	return 0;
 }
