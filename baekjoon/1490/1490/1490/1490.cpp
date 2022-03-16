@@ -16,6 +16,8 @@ vector<int> Div(int n)// 숫자 n 을 자릿수 대로 나누어 벡터에 저장해주는 함수.
 		n /= 10;
 
 	}
+
+
 	return tmp;
 }
 
