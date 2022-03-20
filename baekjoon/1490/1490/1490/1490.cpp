@@ -1,26 +1,56 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <stack>
 
 using namespace std;
 
-vector<int> Div(int n)// 숫자 n 을 자릿수 대로 나누어 벡터에 저장해주는 함수.
+int gcd(int a, int b)
 {
-	vector<int> tmp;
+	while (b != 0)
+	{
+		int r = a % b;
+		a = b;
+		b = r;
+	}
+
+	return a;
+}
+
+int lcm(int a, int b)
+{
+	return a * b / gcd(a, b);
+}
+
+
+int Div(int n)// 숫자 n 을 자릿수 대로 나누어 stack에 저장해주고 자릿수들의 최소 공배수를 출력해주는 함수
+{
+	stack<int> tmp;
 	while (n !=0)
 	{
-		if (n % 10 != 0)// 0 으로는 정수를 나눌수 없기때문에 0 이 아닌 경우에만 벡터에 값 저장.
+		if (n % 10 != 0)// 0 으로는 정수를 나눌수 없기때문에 0 이 아닌 경우에만 stack에 값 저장.
 		{
-			tmp.push_back(n % 10);
+			tmp.push(n % 10);
 		}
 		n /= 10;
 
 	}
 
+	while (tmp.size() != 1)
+	{
+		int a, b;
+		a = tmp.top();
+		tmp.pop();
+		b = tmp.top();
+		tmp.pop();
 
-	return tmp;
+		tmp.push(lcm(a, b));
+	}
+
+	return tmp.top();
 }
 
+/*
 int DivToDigits(int num,vector<int> divNum)
 {
 	cout << num <<" is numToDigits" << '\n'; 
@@ -61,18 +91,40 @@ int recursiveFunc(int num, vector<int> divNum)
 
 	return -1;
 }
+*/
 
 int Solution()
 {
 	long long answer;
-	long long num;
-
-	vector<int> v;
+	int  num,lcmNum , rem;
 
 	cin >> num;
 
-	v = Div(num);
+	lcmNum = Div(num);
 
+
+	int exp = 1;
+	answer = num;
+	rem = answer % lcmNum; // 초기 값이 자릿수들로 나뉘어지는지 검사?
+
+	while (rem != 0)
+	{
+		int diff = lcmNum - rem;
+		cout << "dif is " <<diff << endl;
+		if (diff == lcmNum || diff < exp)
+		{
+			answer += diff;
+			break;
+		}
+
+		exp *= 10;
+		answer *= 10;
+		rem = answer % lcmNum;
+	}
+
+	return answer;
+
+	/*
 	if (DivToDigits(num, v) != -1)
 	{
 
@@ -104,14 +156,14 @@ int Solution()
 		}
 		
 	}
-
+	*/
 	
 }
 
 int main()
 {
 
-	cout << " solution is " <<Solution();
+	cout<<Solution();
 
 	return 0;
 }
