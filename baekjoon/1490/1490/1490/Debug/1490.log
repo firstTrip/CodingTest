@@ -1,3 +1,3 @@
 ﻿  1490.cpp
-C:\Users\hdnwl\Desktop\CodingTest\baekjoon\1490\1490\1490\1490.cpp(125,9): warning C4244: 'return': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\hdnwl\Desktop\CodingTest\baekjoon\1490\1490\1490\1490.cpp(99,20): warning C4101: 'rem' :참조되지 않은 지역 변수입니다.
   1490.vcxproj -> C:\Users\hdnwl\Desktop\CodingTest\baekjoon\1490\1490\Debug\1490.exe

@@ -93,7 +93,7 @@ int recursiveFunc(int num, vector<int> divNum)
 }
 */
 
-int Solution()
+long long Solution()
 {
 	long long answer;
 	int  num,lcmNum , rem;
@@ -105,6 +105,22 @@ int Solution()
 
 	int exp = 1;
 	answer = num;
+
+
+	for (int i = 1;; i++)
+	{
+		for (int j = 0; j <exp ; j++)
+		{
+			if ((answer * exp + j) % lcmNum == 0)
+			{
+				return (answer * exp + j);
+
+			}
+		}
+
+		exp *= 10;
+	}
+	/*
 	rem = answer % lcmNum; // 초기 값이 자릿수들로 나뉘어지는지 검사?
 
 	while (rem != 0)
@@ -123,7 +139,7 @@ int Solution()
 	}
 
 	return answer;
-
+	*/
 	/*
 	if (DivToDigits(num, v) != -1)
 	{
