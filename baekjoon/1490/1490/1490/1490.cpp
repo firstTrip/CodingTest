@@ -111,6 +111,7 @@ long long Solution()
 	{
 		for (int j = 0; j <exp ; j++)
 		{
+			cout << "exp is " << exp << '\n';
 			if ((answer * exp + j) % lcmNum == 0)
 			{
 				return (answer * exp + j);
