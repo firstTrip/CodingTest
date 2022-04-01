@@ -3,25 +3,52 @@
 using namespace std;
 
 int n;
-int arr[101][101] = {-1,};
-int temp;
 int answer = 0;
+
+long long arr[101][101];
+long long DP[101][101];
 
 void Search(int x,int y)
 {
-	if (arr[x][y] == -1)
+
+	if (x >n || y>n)
+	{
+
+		cout << x << "   " << y << '\n';
 		return;
 
-	if (arr[x][y] != 0)
-	{
-		Search(x + arr[x][y], y);
-		Search(x, y + arr[x][y]);
 	}
-	else if(arr[x][y] == 0)
+		
+	if(arr[x][y] == 0)
 	{
 		answer++;
+		return;
 	}
 
+	Search(x + arr[x][y], y);
+	Search(x, y + arr[x][y]);
+
+}
+
+void Solution()
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (DP[i][j] == 0 || (i == n - 1 && j == n - 1)) continue;
+
+			int value = arr[i][j];
+			int Down = value + i;
+			int Right = value + j;
+
+			if (Down < n) DP[Down][j] = DP[Down][j] + DP[i][j];
+			if (Right < n) DP[i][Right] = DP[i][Right] + DP[i][j];
+
+		}
+	}
+
+	cout << DP[n - 1][n - 1];
 }
 
 int main()
@@ -32,16 +59,13 @@ int main()
 	{
 		for (int j = 0; j < n; j++)
 		{
-			cin >> temp;
-			arr[i][j] = temp;
-
+			cin >> arr[i][j];
 		}
 	}
 
+	DP[0][0] = 1;// 처음 지점은 무조건 지나기 때문에 1로 시작
 
-	Search(0, 0);
-
-	cout << answer;
+	Solution();
 
 	return 0;
 }
