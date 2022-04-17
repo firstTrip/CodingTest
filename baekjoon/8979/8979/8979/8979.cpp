@@ -1,33 +1,39 @@
-#include<iostream>
-#include<algorithm> 
-
+#include <iostream>
 using namespace std;
 
-int n, m;
-int arr[1000][4];
+int N, K;
+int gold[1001];
+int silver[1001];
+int bronze[1001];
+int res = 0;
 
-int main()
-{
-	cin >> n >> m;
+int main() {
 
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < 4; j++)
-		{
-			cin >> arr[i][j];
-		}
-	}
+    //입력
+    cin >> N >> K;
+    for (int i = 0; i < N; i++) {
+        int index;
+        cin >> index;
+        cin >> gold[index] >> silver[index] >> bronze[index];
+    }
 
+    //1번 국가부터 N번 국가까지 K번 국가보다 더 잘한 국가일 경우 res++
+    for (int i = 1; i <= N; i++) {
+        if (gold[i] > gold[K]) {
+            res++;
+        }
+        else if (gold[i] == gold[K]) {
+            if (silver[i] > silver[K]) {
+                res++;
+            }
+            else if (silver[i] == silver[K]) {
+                if (bronze[i] > bronze[K]) {
+                    res++;
+                }
+            }
+        }
+    }
 
-
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < 4; j++)
-		{
-			cout << arr[i][j] << " ";
-		}
-		cout << '\n';
-	}
-
-	return 0;
+    //출력
+    cout << res + 1;
 }

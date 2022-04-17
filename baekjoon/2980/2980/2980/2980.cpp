@@ -4,9 +4,8 @@ using namespace std;
 
 int N, L; // N 은 신호등의 개수 , L 은 도로의 길이
 int arr[100][3];
-int cnt = 1;
-int arrCnt=0, crossTime=0;
-int nowPlace = 0;
+int crossTime=1;
+
 int main()
 {
 	cin >> N >> L;
@@ -16,23 +15,16 @@ int main()
 			cin >> arr[i][j];
 
 
-	while (true)
+	for (int i = 1; i <= L; i++)
 	{
-		if ((arr[arrCnt][1] - cnt) <0)
+		for (int j = 0; j < N; j++)
 		{
-			cnt = 0;
-			arrCnt++;
-			nowPlace++;
+			if (i == arr[j][0] && arr[j][1] > crossTime % (arr[j][1] + arr[j][2]))
+			{
+				crossTime += arr[j][1] - crossTime % (arr[j][1] + arr[j][2]);
+			}
+			crossTime++;
 		}
-		else
-			nowPlace--;
-
-		cnt++;
-		crossTime++;
-		nowPlace++;
-
-		if (nowPlace > L)
-			break;
 	}
 
 	cout <<crossTime-1;
