@@ -4,8 +4,8 @@ using namespace std;
 
 int N, M; //가로,세로 
 
-int arr[50][50];
-int minCnt = 0;
+char arr[50][50];
+int minCnt = 64;
 
 
 int MakeChes(int x,int y)
@@ -16,17 +16,25 @@ int MakeChes(int x,int y)
 	{
 		for (int j = 0; j < 8; j++)
 		{
-			if (arr[i][j] = 'B')
+			if (arr[x+i][y+j] == 'B')
 			{
-
-
+				if (arr[x + i + 1][y + j + 1] != 'W')
+				{
+					minCnt++;
+				}
 
 			}
 			else
 			{
+				if (arr[x + i + 1][y + j + 1] != 'B')
+				{
+					minCnt++;
+				}
 
 			}
+			j++;
 		}
+		i++;
 	}
 
 	return cnt;
@@ -35,13 +43,11 @@ int MakeChes(int x,int y)
 int main()
 {
 	cin >> N >> M;
-	/*
-	for (int i = 0; i < N; i++)
-	{
+	
+	for (int i = 0; i < N; i++){
 		for (int j = 0; j < M; j++)
 			cin >> arr[i][j];
 	}
-	*/
 
 	for (int i = 0; i < N; i++)
 	{
@@ -50,8 +56,11 @@ int main()
 			if (N - i < 8|| M-j<8)
 				continue;
 
-			MakeChes(i, j);
+			if (minCnt < MakeChes(i, j))
+				minCnt = MakeChes(i, j);
 		}
+
+		
 	}
 
 
