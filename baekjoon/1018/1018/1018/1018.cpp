@@ -19,6 +19,8 @@ int MakeChes(int x,int y)
 			if (arr[i][j] = 'B')
 			{
 
+
+
 			}
 			else
 			{
