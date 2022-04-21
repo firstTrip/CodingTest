@@ -1,0 +1,7 @@
+﻿  1713.cpp
+C:\Users\hdnwl\Desktop\CodingTest\baekjoon\1713\1713\1713\1713.cpp(24,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\baekjoon\1713\1713\1713\1713.cpp(29,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\baekjoon\1713\1713\1713\1713.cpp(52,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\baekjoon\1713\1713\1713\1713.cpp(64,17): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\baekjoon\1713\1713\1713\1713.cpp(81,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  1713.vcxproj -> C:\Users\hdnwl\Desktop\CodingTest\baekjoon\1713\1713\Debug\1713.exe
