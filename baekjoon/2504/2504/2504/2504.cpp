@@ -1,4 +1,5 @@
 #include<iostream>
+#include<stack>
 
 using namespace std;
 
@@ -11,17 +12,18 @@ int main()
 
 	cin >> s;
 
-	for (int i = 0; i < s.length()-1; i++)
-	{
-		temp += s[i];
-		temp += s[i+1];
+	stack<char> st;
 
-		if (temp == n || temp == m)
-		{
-			i++;
-		}
+	for (int i = 0; i < s.length(); i++)
+	{
+		st.push(s[i]);
 	}
 
+	while (!st.empty())
+	{
+		char temp = st.top();
+
+	}
 
 	return 0;
 }
