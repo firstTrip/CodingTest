@@ -19,8 +19,6 @@ int main()
 
 		for (int i = 0;; i++)
 		{
-			cout << maxFive << "     " << i << '\n';
-
 
 			if ((maxFive * 5 + i * 3 == n)) {
 				cout << (maxFive + i);
@@ -38,7 +36,6 @@ int main()
 
 
 	cout << -1;
-
 
 	return 0;
 }
