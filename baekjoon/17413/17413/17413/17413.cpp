@@ -1,63 +1,56 @@
-#include<iostream>
+#include <iostream>
 #include<stack>
-#include<queue>
 #include<string>
-
-
 using namespace std;
 
-string s = "";
-string answer;
+void Print(stack <char>& s) { // 스택에서 문자열 뒤집어 꺼내기
+	while (!s.empty()) {
+		cout << s.top();
+		s.pop();
+	}
+}
 
-stack<char> st;
-vector<char> Tag;
+int main() {
+	string str;
+	getline(cin, str);
 
+	bool tag = false;
 
-int main()
-{
+	stack <char> s;
 
-	cin >> s;
-
-	for (int i = 0; i < s.length(); i++)
-	{
-		if (s[i] == '<')
+	for (char ch : str) {
+		if (ch == '<')
 		{
-			for (int j=i+1; ;j++)
+			Print(s);
+			tag = true;
+			cout << ch;
+		}
+		else if (ch == '>')
+		{
+			tag = false;
+			cout << ch;
+		}
+		else if (tag) // < > 내부의 글자라면
+		{
+			cout << ch;
+		}
+		else // < > 내부의 글자가 아니라면
+		{
+			if (ch == ' ')
 			{
-				if (s[j] == '>')
-				{
-					i = j;
-					break;
-				}
-				Tag.push_back(s[i]);
-
+				Print(s);
+				cout << ch;
 			}
-			
-			for (int i = 0; i < Tag.size(); i++)
-				answer += Tag[i];
-		}
-		else if (s[i] == ' ')
-		{
-			cout << "into " << '\n';
-
-			while (!st.empty())
+			else
 			{
-
-				answer += st.top();
-				st.pop();
+				s.push(ch);
 			}
-
 		}
-		else
-		{
-			cout << s[i]<<'\n';
-
-			st.push(s[i]);
-		}
-		
-
 	}
 
-	cout << answer;
+	// 이 문자열에는 마지막에 공백이 없으므로, 남은 문자열을 스택에서 꺼내줘야함
+	Print(s);
+	cout << '\n';
+
 	return 0;
 }
