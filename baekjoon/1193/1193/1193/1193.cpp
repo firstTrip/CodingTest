@@ -1,9 +1,16 @@
 #include<iostream>
 #include<cmath>
+#include<vector>
 using namespace std;
 
 int n;
 float row;
+int cnt=1; // 행렬의 수
+
+
+int dp[1001];
+vector<pair<int, int>> v;
+
 int main()
 {
 	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
@@ -13,9 +20,11 @@ int main()
 
 	row = ceil(sqrt(n));
 
-	for (int i = 0; i < row; i++)
+	v.push_back(make_pair(1, 1));
+
+	while (true) 
 	{
-		for (int j = 0; j < row; j++)
+		while (cnt>v[cnt].first + v[cnt].second)
 		{
 
 		}
