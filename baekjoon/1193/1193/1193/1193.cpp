@@ -1,37 +1,18 @@
-#include<iostream>
-#include<cmath>
-#include<vector>
+#include <iostream>
 using namespace std;
 
-int n;
-float row;
-int cnt=1; // 행렬의 수
+int main() {
+	int N;
+	cin >> N;
 
-
-int dp[1001];
-vector<pair<int, int>> v;
-
-int main()
-{
-	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-
-	cin >> n;
-
-
-	row = ceil(sqrt(n));
-
-	v.push_back(make_pair(1, 1));
-
-	while (true) 
-	{
-		while (cnt>v[cnt].first + v[cnt].second)
-		{
-
-		}
+	int i = 1;
+	while (N > i) {
+		N -= i;
+		i++;
 	}
 
-
-	return 0;
+	if (i % 2 == 1)
+		cout << i + 1 - N << '/' << N << endl;
+	else
+		cout << N << '/' << i + 1 - N << endl;
 }
-
-
