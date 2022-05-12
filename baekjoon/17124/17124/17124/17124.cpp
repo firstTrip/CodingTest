@@ -45,6 +45,8 @@ int main()
 				if(add > j)
 					add = j;
 
+
+
 			}
 
 		}
