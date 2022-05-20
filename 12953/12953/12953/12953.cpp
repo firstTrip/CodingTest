@@ -25,6 +25,8 @@ int lcm(int a,int b) // 최소 공배수 구하는 방법
     cout << "a is " << a << endl;
     cout << "b is " << b << endl;
 
+
+
     return a *b/gcd(a,b);
 }
 
