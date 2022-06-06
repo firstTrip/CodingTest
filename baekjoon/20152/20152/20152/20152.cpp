@@ -14,6 +14,7 @@ int main() {
 		}
 	}
 
+
 	int k = abs(H - N);
 	cout << arr[k][k];
 	return 0;
