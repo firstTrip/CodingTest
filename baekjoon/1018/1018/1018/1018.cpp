@@ -35,6 +35,8 @@ int WB_cnt(int x, int y)
         {
             if (board[x + i][y + j] != WB[i][j])
                 cnt++;
+
+
         }
 
     }
