@@ -4,26 +4,42 @@
 using namespace std;
 
 string s;
-string temp = "";
-string n = "()", m= "[]";
+stack<char> st;
 
+int num =1;
+// 더하기 연산 부분 해야함
 int main()
 {
 
 	cin >> s;
 
-	stack<char> st;
 
 	for (int i = 0; i < s.length(); i++)
 	{
-		st.push(s[i]);
+		if (s[i] == '(')
+		{
+			st.push(s[i]);
+
+		}
+		else if (s[i] == '[')
+		{
+			st.push(s[i]);
+
+		}
+		else if (s[i] == ')')
+		{
+			num *= 2;
+
+			st.pop();
+		}
+		else if (s[i] == ']')
+		{
+			num *= 3;
+
+			st.pop();
+		}
 	}
 
-	while (!st.empty())
-	{
-		char temp = st.top();
-
-	}
-
+	cout << num;
 	return 0;
 }
