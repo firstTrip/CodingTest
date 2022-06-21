@@ -1,45 +1,85 @@
-#include<iostream>
-#include<stack>
+#include <iostream>
+#include <stack>
+#include <string>
+#include <cmath>
 
 using namespace std;
 
-string s;
-stack<char> st;
+string input;
+stack<char> s;
 
-int num =1;
-// 더하기 연산 부분 해야함
-int main()
+
+int main(void)
 {
 
-	cin >> s;
+	ios_base::sync_with_stdio(0);
+	cin.tie(0); //cin 실행속도 향상
+	cin >> input;
 
+	long long result = 0;
+	int temp = 1;
+	bool impossible = false;
 
-	for (int i = 0; i < s.length(); i++)
+	for (int i = 0; i <input.size(); i++)
 	{
-		if (s[i] == '(')
+
+		if (input[i] == '(')
 		{
-			st.push(s[i]);
+
+			temp*= 2;
+
+			s.push('(');
 
 		}
-		else if (s[i] == '[')
+		else if (input[i] == '[')
 		{
-			st.push(s[i]);
+
+			temp*= 3;
+			s.push('[');
 
 		}
-		else if (s[i] == ')')
+		else if (input[i] == ')' &&(s.empty() || s.top() != '('))
 		{
-			num *= 2;
 
-			st.pop();
+			impossible= true;
+			break;
+
 		}
-		else if (s[i] == ']')
+
+		else if (input[i] == ']' &&(s.empty() || s.top() != '['))
 		{
-			num *= 3;
-
-			st.pop();
+			impossible= true;
+			break;
 		}
+
+		else if (input[i] == ')')
+		{
+			if (input[i - 1] == '(')
+				result += temp;
+
+			s.pop();
+			temp /= 2;
+
+		}
+		else if (input[i] == ']')
+		{
+
+			if (input[i - 1] == '[')
+				result+= temp;
+			s.pop();
+			temp/= 3;
+
+		}
+
 	}
 
-	cout << num;
+
+
+	if (impossible ||!s.empty())
+		cout<< 0 << "\n";
+	else
+		cout<< result << "\n";
+
 	return 0;
+
 }
