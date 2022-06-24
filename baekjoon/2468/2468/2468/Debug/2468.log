@@ -1,7 +1,2 @@
 ﻿  2468.cpp
-C:\Users\hdnwl\Desktop\CodingTest\baekjoon\2468\2468\2468\2468.cpp(12,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\hdnwl\Desktop\CodingTest\baekjoon\2468\2468\2468\2468.cpp(14,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\hdnwl\Desktop\CodingTest\baekjoon\2468\2468\2468\2468.cpp(33,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\hdnwl\Desktop\CodingTest\baekjoon\2468\2468\2468\2468.cpp(35,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\hdnwl\Desktop\CodingTest\baekjoon\2468\2468\2468\2468.cpp(60,8): warning C4101: 'm' :참조되지 않은 지역 변수입니다.
   2468.vcxproj -> C:\Users\hdnwl\Desktop\CodingTest\baekjoon\2468\2468\Debug\2468.exe
