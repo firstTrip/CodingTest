@@ -1,0 +1,5 @@
+﻿  92344.cpp
+C:\Users\hdnwl\Desktop\CodingTest\Programmers_3Stage\92344\92344\Project1\92344.cpp(11,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\Programmers_3Stage\92344\92344\Project1\92344.cpp(54,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\Programmers_3Stage\92344\92344\Project1\92344.cpp(56,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Project1.vcxproj -> C:\Users\hdnwl\Desktop\CodingTest\Programmers_3Stage\92344\92344\Debug\Project1.exe
