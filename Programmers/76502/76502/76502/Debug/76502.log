@@ -1,0 +1,5 @@
+﻿  76502.cpp
+C:\Users\hdnwl\Desktop\CodingTest\Programmers\76502\76502\76502\76502.cpp(26,15): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\Programmers\76502\76502\76502\76502.cpp(32,29): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\Programmers\76502\76502\76502\76502.cpp(44,28): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  76502.vcxproj -> C:\Users\hdnwl\Desktop\CodingTest\Programmers\76502\76502\Debug\76502.exe
