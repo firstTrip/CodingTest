@@ -1,0 +1,7 @@
+﻿  Test2.cpp
+C:\Users\hdnwl\Desktop\CodingTest\wemade_codingTest\Test2\Test2\Test2.cpp(18,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\wemade_codingTest\Test2\Test2\Test2.cpp(20,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\wemade_codingTest\Test2\Test2\Test2.cpp(34,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\wemade_codingTest\Test2\Test2\Test2.cpp(36,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hdnwl\Desktop\CodingTest\wemade_codingTest\Test2\Test2\Test2.cpp(82,13): warning C4018: '>=': signed 또는 unsigned가 일치하지 않습니다.
+  Test2.vcxproj -> C:\Users\hdnwl\Desktop\CodingTest\wemade_codingTest\Test2\Debug\Test2.exe
